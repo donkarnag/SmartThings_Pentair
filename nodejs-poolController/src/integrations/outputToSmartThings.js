@@ -6,7 +6,7 @@ module.exports = function(container) {
 
     var address = configFile.outputToSmartThings.address
     var port = configFile.outputToSmartThings.port
-    var protocol = configFile.poolController.web.expressTransport
+    var protocol = container.settings.get('httpExpressPort')
 
     var serverURL;
     var secureTransport;
